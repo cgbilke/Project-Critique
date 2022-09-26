@@ -1,0 +1,91 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Games",
+    "description": "A video game and it's associated fields",
+    "type": "object",
+    "properties": {
+        "game_id": {
+            "description": "A UUID to represent a particular game object",
+            "type": "string",
+            "format": "uuid"
+        },
+        "title": {
+            "description": "The game's running title and name",
+            "type": "string"
+        },
+        "genres": {
+            "description": "A list of genres that this game fits into",
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "image": {
+            "description": "A string url used to represent a particular games logo",
+            "type": "string",
+            "format": "uri"
+        },
+        "poster": {
+            "description": "A string url used to represent a particular games poster",
+            "type": "string",
+            "format": "uri"
+        },
+        "platforms": {
+            "description": "A list of the platforms that the game is available to be played on",
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "developers": {
+            "description": "A list of the various developers that have contributed to a games creation",
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "release_date": {
+            "description": "The day that the game was released to the open public",
+            "type": "string",
+            "format": "date-time"
+        },
+        "summary": {
+            "description": "A written overview of the game to be played",
+            "type": "string"
+        },
+        "social_media_links": {
+            "description": "A list of url hyperlinks to represent social media and other info",
+            "type": "object",
+            "properties": {
+                "website_link": {
+                    "description": "The name of the website the hyperlink corresponds to",
+                    "type": "string",
+                    "format": "uri"
+                }
+            }
+        },
+        "system_requirements": {
+            "description": "A list of hardware requirements needed to run the game effectively",
+            "type": "object",
+            "properties": {
+                "CPU": {
+                    "description": "CPU requirements to run a game",
+                    "type": "string"
+                },
+                "GPU": {
+                    "description": "GPU requirements to run a game",
+                    "type": "string"
+                },
+                "OS": {
+                    "description": "OS requirements to run a game",
+                    "type": "string"
+                },
+                "RAM": {
+                    "description": "Memory requirements to run a game",
+                    "type": "string"
+                }
+            }
+        }
+    },
+    "required": ["game_id", "title"]
+}

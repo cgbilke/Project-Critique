@@ -1,0 +1,8 @@
+JSON files located here are meant to be JSON schema documents used to define the data model of particular
+collections that may be used. The schema is based on: 
+
+https://json-schema.org/draft/2020-12/schema
+
+There is a solid user guide here: 
+
+https://json-schema.org/learn/getting-started-step-by-step
